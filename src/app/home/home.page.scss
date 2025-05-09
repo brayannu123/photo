@@ -1,0 +1,21 @@
+.form-layout {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  gap: 16px;
+}
+
+.image-preview {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+ion-img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  object-fit: cover;
+}
