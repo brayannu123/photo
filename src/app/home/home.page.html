@@ -8,12 +8,15 @@
 
   <form [formGroup]="form" (ngSubmit)="onSubmit()" class="form-layout">
 
-    
+
     <ion-button expand="block" (click)="pickImage()">Seleccionar Imagen</ion-button>
 
 
-    <div *ngIf="imagePreview" class="image-preview">
+    <!-- <div *ngIf="imagePreview" class="image-preview">
       <ion-img [src]="imagePreview"></ion-img>
+    </div> -->
+    <div *ngIf="filePreviewUrl" class="image-preview">
+      <img [src]="filePreviewUrl" alt="Imagen seleccionada" />
     </div>
 
 
@@ -26,7 +29,7 @@
     </ion-text>
 
 
-    <ion-button expand="block" type="submit" [disabled]="form.invalid || !imageFile">
+    <ion-button expand="block" type="submit" [disabled]="form.invalid">
       Guardar
     </ion-button>
 
